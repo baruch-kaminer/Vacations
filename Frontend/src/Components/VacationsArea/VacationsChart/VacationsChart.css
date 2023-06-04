@@ -1,0 +1,8 @@
+.VacationsChart{
+   
+}
+
+.VacationsChart canvas{
+    min-height: 400px;
+    width: 60%;
+}

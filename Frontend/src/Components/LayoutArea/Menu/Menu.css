@@ -1,0 +1,38 @@
+.Menu {
+	display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    
+}
+
+
+.Menu .logo {
+    font-family: Arial, sans-serif;
+    text-align: center;
+  }
+  
+.Menu  .logo h1 {
+    font-size: 40px;
+    font-weight: bold;
+    color: coral;
+    margin: 0;
+  }
+  
+.Menu .logo h2 {
+    font-size: 24px;
+    font-weight: normal;
+    color: coral;
+    margin: 0;
+  }
+
+@media only screen and (max-width:500px) {
+    .Menu  .logo h1 {
+        font-size: 30px;
+      }
+      
+    .Menu .logo h2 {
+        font-size: 20px;
+      }  
+}

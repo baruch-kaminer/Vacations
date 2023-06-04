@@ -1,0 +1,9 @@
+.Header {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image:url('../../../Assets/images/vacation-header.jpg') ;
+    background-size: cover;
+}
+

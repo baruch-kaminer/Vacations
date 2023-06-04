@@ -1,0 +1,29 @@
+.VacationsFollow{}
+
+
+.follow-button {
+    color: coral;
+    font-family: "Helvetica";
+    font-size: 10pt;
+    background-color: #ffffff;
+    border: 1px solid;
+    border-color: coral;
+    border-radius: 3px;
+    width: 85px;
+    height: 30px;
+    /* position: absolute;	 
+    top: 50px;
+    left: 50px;	 */
+    cursor: pointer;
+
+  }
+
+  .click{
+
+    /* width: 210px;
+    left: 65px; */
+    color: rgb(255, 255, 255);
+    background-color: coral;
+    border-color: coral;
+
+  }
