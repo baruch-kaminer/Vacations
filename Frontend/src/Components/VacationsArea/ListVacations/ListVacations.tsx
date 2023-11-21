@@ -22,9 +22,15 @@ function ListVacations():JSX.Element{
     useEffect(() => {
         setLoader('loader')
         vacationsServices.getTenVacations(num)
-        .then(vacations => setVacations(vacations))
+        .then(async vacations => {
+            await new Promise(() => {
+                setTimeout(() => {
+                    setLoader('v')
+                    setVacations(vacations) 
+                }, 1000);
+            })            
+        })
         .catch(err => notifyService.error(err))
-        .finally(() => setLoader('v'))
     }, [num])
     
     const getVacationsByUserId = async() => {
@@ -59,14 +65,16 @@ function ListVacations():JSX.Element{
             
             {vacations.map(v => <VacationsCard key={v.vacationId} vacations={v} deleteVacation={deleteVacation}/>)}
         </div>  
+        { vacations.length > 0 &&
         <div className="btnShowMore">
-               <button className="learn-more btnShowMore" onClick={() => setNum(num + 9)} >
-                    <span className="circle" aria-hidden="true">
-                    <span className="icon arrow"></span>
-                    </span>
-                    <span className="button-text">Show More</span>
-                </button> 
-            </div>
+            <button className="learn-more btnShowMore" onClick={() => setNum(num + 9)} >
+                <span className="circle" aria-hidden="true">
+                <span className="icon arrow"></span>
+                </span>
+                <span className="button-text">Show More</span>
+            </button> 
+        </div>
+        }
         </div>
        
     )

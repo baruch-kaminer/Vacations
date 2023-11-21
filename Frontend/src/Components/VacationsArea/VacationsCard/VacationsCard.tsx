@@ -75,8 +75,9 @@ const delVacation = async(id:number) => {
                     <h2 className="card__title">{props.vacations.destination}</h2>
                     <div className="card__subtitle">{props.vacations.description}</div>
                     <p className="card__description">The vacation will be on dates:<br/>
-                    {new Date(props.vacations.startDate).toLocaleDateString()} - {new Date(props.vacations.endDate).toLocaleDateString()}<br/>
-                    The price of the vacation: {props.vacations.price}$
+                    {new Date(props.vacations.startDate).toLocaleDateString().replace('2023', '2024')} - 
+                    {new Date(props.vacations.endDate).toLocaleDateString().replace('2023', '2024')}<br/>
+                    The price of the vacation: {props.vacations.price}&#36;
                     </p>
                 </div>
                 { user?.role === 'Admin' && <footer className="card__footer">

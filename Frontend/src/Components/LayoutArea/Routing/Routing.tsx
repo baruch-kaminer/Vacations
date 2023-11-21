@@ -7,6 +7,7 @@ import EditVacations from "../../VacationsArea/EditVacations/EditVacations";
 import VacationsChart from "../../VacationsArea/VacationsChart/VacationsChart";
 import PageNotFound from "../PageNotFound/PageNotFound";
 import "./Routing.css";
+import About from "../../HomeArea/About/About";
 
 function Routing(): JSX.Element {
     return (
@@ -15,6 +16,7 @@ function Routing(): JSX.Element {
             <Routes>
                 <Route path="/" element={<Home/>} />
                 <Route path="chart" element={<VacationsChart />} />
+                <Route path="/about" element={<About />} />
                 <Route path="/insert" element={<AddVacation/>} />
                 <Route path="/edit/:id" element={<EditVacations/>} />
                 <Route path="/connection" element={<Login />} />

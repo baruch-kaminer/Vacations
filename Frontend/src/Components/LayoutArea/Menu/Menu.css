@@ -5,12 +5,18 @@
     justify-content: center;
     text-align: center;
     
+    
 }
 
 
 .Menu .logo {
     font-family: Arial, sans-serif;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 8px;
+    align-items: center;
   }
   
 .Menu  .logo h1 {
@@ -21,9 +27,9 @@
   }
   
 .Menu .logo h2 {
-    font-size: 24px;
-    font-weight: normal;
-    color: coral;
+    font-size: 20px;
+    font-weight: 600;
+    color: rgb(243, 181, 156);
     margin: 0;
   }
 

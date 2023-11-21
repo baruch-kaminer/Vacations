@@ -1,15 +1,13 @@
 .AuthMenu {}
 
 .AuthMenu span, a  {
-    color:black;
+    color:coral;
     font-size: 22px;
     font-weight: 700;
-    
-    
 }
 
 .AuthMenu .name{
-    color: rgb(19, 112, 19);
+    color: coral;
 }
 
 .ps{
