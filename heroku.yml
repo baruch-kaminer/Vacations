@@ -1,10 +1,6 @@
 build:
-  frontend:
-    docker:
-      web: Frontend/Dockerfile
-  backend:
-    docker:
-      web: Backend/Dockerfile
+  frontend: Frontend/Dockerfile
+  backend: Backend/Dockerfile
 
 release:
   command:
@@ -22,4 +18,4 @@ run:
 
   - type: worker
     command: node worker.js
-    image: vacations
+    name: Worker
