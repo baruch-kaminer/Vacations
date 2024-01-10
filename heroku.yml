@@ -1,5 +1,25 @@
 build:
-  docker:
-    web: Dockerfile
+  frontend:
+    docker:
+      web: frontend/Dockerfile
+  backend:
+    docker:
+      web: backend/Dockerfile
+
 run:
-  web: bundle exec puma -C config/puma.rb
+  - type: web
+    command: npm start
+    name: Frontend
+
+  - type: web
+    command: npm start
+    name: Backend
+
+  - type: worker
+    command: node worker.js
+    name: Worker
+
+addons:
+  - plan: heroku-mysql
+    as: DATABASE
+
