@@ -20,5 +20,3 @@ run:
   - type: worker
     command: node worker.js
     name: Worker
-
-   
