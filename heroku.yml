@@ -1,10 +1,10 @@
 build:
   frontend:
     docker:
-      web: frontend/Dockerfile
+      web: Frontend/Dockerfile
   backend:
     docker:
-      web: backend/Dockerfile
+      web: Backend/Dockerfile
 
 run:
   - type: web
