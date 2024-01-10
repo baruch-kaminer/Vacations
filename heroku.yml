@@ -1,6 +1,6 @@
 build:
-  frontend: Frontend/Dockerfile.web
-  backend: Backend/Dockerfile.web
+  frontend: Frontend/
+  backend: Backend/
 
 release:
   command:
