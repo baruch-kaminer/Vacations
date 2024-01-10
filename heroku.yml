@@ -1,10 +1,12 @@
 build:
-  frontend:
-    docker:
-      web: frontend/Dockerfile
-  backend:
-    docker:
-      web: backend/Dockerfile
+  docker:
+    web: frontend/Dockerfile
+    backend: backend/Dockerfile
+
+release:
+  command:
+    - npm run migrate
+    - npm run seed
 
 run:
   - type: web
@@ -19,6 +21,4 @@ run:
     command: node worker.js
     name: Worker
 
-services:
-  - name: mysql
-    plan: heroku-mysql
+   
