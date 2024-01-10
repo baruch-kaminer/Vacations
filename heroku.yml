@@ -1,10 +1,10 @@
 build:
   frontend:
     docker:
-      web: Frontend/Dockerfile
+      web: frontend/Dockerfile
   backend:
     docker:
-      web: Backend/Dockerfile
+      web: backend/Dockerfile
 
 run:
   - type: web
@@ -19,7 +19,6 @@ run:
     command: node worker.js
     name: Worker
 
-addons:
-  - plan: heroku-mysql
-    as: DATABASE
-
+services:
+  - name: mysql
+    plan: heroku-mysql
