@@ -1,7 +1,7 @@
 build:
   docker:
-    web: Frontend/Dockerfile
-    backend:  Backend/Dockerfile
+    web: frontend/Dockerfile
+    backend: backend/Dockerfile
 
 release:
   command:
@@ -12,5 +12,6 @@ run:
   web: npm start
   backend: npm start
   worker:
-    command: node worker.js
+    command:
+      - node worker.js
     image: vacations
