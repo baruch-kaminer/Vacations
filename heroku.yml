@@ -1,6 +1,8 @@
 build:
-  frontend: Frontend/Dockerfile
-  backend: backend/Dockerfile
+  docker:
+
+    frontend: Frontend/Dockerfile
+    backend: backend/Dockerfile
 
 release:
   command:
