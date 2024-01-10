@@ -11,4 +11,4 @@ RUN npm i
 
 COPY . /app
 
-ENTRYPOINT npm i && npm start
+CMD ["npm", "start"]
