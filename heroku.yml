@@ -11,3 +11,4 @@ release:
 
 run:
   web: npm start
+  image: vacations
