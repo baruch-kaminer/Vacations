@@ -11,13 +11,16 @@ release:
 
 run:
   web:
-    command: npm start
+    command:
+      - npm start
     image: vacations
 
   backend:
-    command: npm start
+    command:
+      - npm start
     image: vacations
 
   worker:
-    command: node worker.js
+    command:
+      - node worker.js
     image: vacations
