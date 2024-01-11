@@ -10,5 +10,9 @@ release:
     - npm run seed
 
 run:
-   web: npm start
-   web-backend: npm start  
+  - type: web
+    command: npm start
+    image: vacations-frontend
+  - type: web-backend
+    command: npm start
+    image: vacations-backend
