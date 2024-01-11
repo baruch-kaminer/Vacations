@@ -10,14 +10,6 @@ release:
     - npm run seed
 
 run:
-  - type: web
-    command: npm start
-    name: Frontend
-
-  - type: web
-    command: npm start
-    name: Backend
-
-  - type: worker
-    command: node worker.js
-    name: Worker
+  web: npm start
+  backend: npm start
+  worker: node worker.js
