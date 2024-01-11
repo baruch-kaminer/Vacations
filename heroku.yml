@@ -10,5 +10,5 @@ release:
     - npm run seed
 
 run:
-  - web: npm start
-  - web-backend: npm start  
+   web: npm start
+   web-backend: npm start  
