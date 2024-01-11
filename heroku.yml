@@ -13,14 +13,9 @@ run:
   web:
     command:
       - npm start
-    image: vacations
+    image: vacations-frontend
 
   backend:
     command:
       - npm start
-    image: vacations
-
-  worker:
-    command:
-      - node worker.js
-    image: vacations
+    image: vacations-backend
