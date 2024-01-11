@@ -12,10 +12,11 @@ release:
 run:
   web:
     Frontend:
-      - npm start
-    image: vacations-frontend
+      command:
+        - npm start
+      image: vacations-frontend
 
-  Backend:
-    command:
-      - npm start
-    image: vacations-backend
+    Backend:
+      command:
+        - npm start
+      image: vacations-backend
