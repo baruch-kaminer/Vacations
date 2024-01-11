@@ -11,8 +11,10 @@ release:
 
 run:
   web:
-    command: npm start
+    command:
+      - npm start
     image: vacations-frontend
   web-backend:
-    command: npm start
+    command:
+      - npm start
     image: vacations-backend
