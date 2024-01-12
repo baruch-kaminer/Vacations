@@ -23,9 +23,9 @@
 build:
   docker:
     # Use the Dockerfile in the backend directory
-    web: backend/Dockerfile
+    web: Backend/Dockerfile
     # Use the Dockerfile in the frontend directory
-    frontend: frontend/Dockerfile
+    frontend: Frontend/Dockerfile
 run:
   web: npm start
   frontend: npm start
