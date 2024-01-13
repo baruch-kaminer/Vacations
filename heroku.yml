@@ -1,31 +1,32 @@
-# build:
-#   docker:
+build:
+  frontend:
+    docker:
+      web: Backend/Dockerfile
+  backend:
+    docker:
+      web: Frontend/Dockerfile
 
-#     Frontend: ./Frontend
-#     Backend: ./Backend
+release:
+  command:
+    - npm run migrate
+    - npm run seed
 
-# release:
-#   command:
-#     - npm run migrate
-#     - npm run seed
+run:
+  - type: web
+    command: npm start
+    image: vacations-backend
+  - type: frontend
+    command: npm start
+    image: vacations-frontend
 
-# run:
-#   - type: web
-#     command:
-#       - npm start
-#     image: vacations-frontend
-#   - type: web-backend
-#     command:
-#       - npm start
-#     image: vacations-backend
 
     # Define a multi-process application
-build:
-  docker:
-    # Use the Dockerfile in the backend directory
-    web: Backend/Dockerfile
-    # Use the Dockerfile in the frontend directory
-    frontend: Frontend/Dockerfile
-run:
-  web: npm start
-  frontend: npm start
+# build:
+#   docker:
+#     # Use the Dockerfile in the backend directory
+#     web: Backend/Dockerfile
+#     # Use the Dockerfile in the frontend directory
+#     frontend: Frontend/Dockerfile
+# run:
+#   web: npm start
+#   frontend: npm start
