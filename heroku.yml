@@ -14,7 +14,7 @@ run:
   - type: frontend
     command: npm start
     image: vacations-frontend
-    
+
 
 
     # Define a multi-process application
