@@ -42,4 +42,4 @@ server.use('*', routeNotFound);
 
 server.use(catchAll);
 
-server.listen(process.env.PORT || appConfig.port, () => console.log(`Listening to http://localhost:${appConfig.port}`))
+server.listen(appConfig.port, () => console.log(`Listening to http://localhost:${appConfig.port}`))
