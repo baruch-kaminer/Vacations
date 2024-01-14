@@ -25,10 +25,11 @@ build:
     # Use the Dockerfile in the frontend directory
     backend: Backend/Dockerfile 
 
-release:
-  command:
-    - npm run migrate
-    - npm run seed
+# release:
+#   command:
+#     - npm run migrate
+#     - npm run seed
+
 
 run:
   web: npm start
