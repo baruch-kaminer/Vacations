@@ -1,12 +1,16 @@
-import mysql from "mysql";
+// import mysql from "mysql";
 import appConfig from "./AppConfig";
 
-const connection = mysql.createPool({
-    host: appConfig.host,
-    user: appConfig.username,
-    password : appConfig.password,
-    database : appConfig.database,
-});
+
+const mysql = require('mysql');
+const connection = mysql.createConnection(process.env.JAWSDB_URL);
+
+// const connection = mysql.createPool({
+//     host: appConfig.host,
+//     user: appConfig.username,
+//     password : appConfig.password,
+//     database : appConfig.database,
+// });
 
 function execute(sql: string, values?: any[] ): Promise<any>{
     return new Promise(( resolve, reject ) => {
