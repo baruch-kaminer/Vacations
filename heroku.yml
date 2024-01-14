@@ -31,9 +31,9 @@
 build:
   docker:
     # Use the Dockerfile in the backend directory
-    web: Frontend/Dockerfile
+    web: Backend/Dockerfile
     # Use the Dockerfile in the frontend directory
-    backend: Backend/Dockerfile 
+    frontend: Frontend/Dockerfile 
 
 # release:
 #   command:
@@ -43,4 +43,4 @@ build:
 
 run:
   web: npm start
-  backend: npm start
+  frontend: npm start
