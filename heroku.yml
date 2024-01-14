@@ -1,20 +1,46 @@
+# build:
+#   frontend:
+#     docker:
+#       web: Frontend/Dockerfile
+
+#   backend:
+#     docker:
+#       web: Backend/Dockerfile
+
+# run:
+#   - backend:
+#       command:
+#         - npm
+#         - start
+#       image: backend-image-name
+#       ports:
+#         - 5000:5000
+
+#   - frontend:
+#       command:
+#         - npm
+#         - start
+#       image: frontend-image-name
+#       ports:
+#         - 3000:3000
+
+
+
+
+    # Define a multi-process application
 build:
-  frontend: Frontend/Dockerfile
-  backend: Backend/Dockerfile
+  docker:
+    # Use the Dockerfile in the backend directory
+    web: Frontend/Dockerfile
+    # Use the Dockerfile in the frontend directory
+    backend: Backend/Dockerfile 
+
+# release:
+#   command:
+#     - npm run migrate
+#     - npm run seed
+
 
 run:
-  - backend:
-      command:
-        - npm
-        - start
-      image: backend-image-name
-      ports:
-        - 5000:5000
-
-  - frontend:
-      command:
-        - npm
-        - start
-      image: frontend-image-name
-      ports:
-        - 3000:3000
+  web: npm start
+  backend: npm start
