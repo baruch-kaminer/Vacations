@@ -8,17 +8,21 @@ build:
       web: Backend/Dockerfile
 
 run:
-  backend:
-    command:
-      - npm
-      - start
-    image: backend-image-name
+  - backend:
+      command:
+        - npm
+        - start
+      image: backend-image-name
+      ports:
+        - 5000:5000
 
-  frontend:
-    command:
-      - npm
-      - start
-    image: frontend-image-name
+  - frontend:
+      command:
+        - npm
+        - start
+      image: frontend-image-name
+      ports:
+        - 3000:3000
 
 
 
