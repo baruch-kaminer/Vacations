@@ -5,7 +5,6 @@ import routeNotFound from "./3-middleware/route-not-found";
 import cors from "cors"
 import authController from "./6-controllers/auth-controller";
 import vacationsController from "./6-controllers/vacation-controller";
-import frontController from "./6-controllers/front-controller ";
 import followController from "./6-controllers/follow-controller";
 import expressRateLimit from "express-rate-limit";
 import helmet from "helmet";
@@ -32,8 +31,6 @@ server.use(expressFileUpload({
 
 
 server.use(sanitaize);
-
-server.use('/', frontController)
 
 server.use('/api', authController);
 
