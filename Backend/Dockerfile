@@ -5,6 +5,10 @@ RUN npm i -g nodemon
 
 WORKDIR /app
 
+ENV PORT 5000
+
+EXPOSE $port
+
 COPY package*.json /app/
 
 RUN npm i
