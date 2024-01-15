@@ -113,5 +113,5 @@ build:
     web: ./Backend/Dockerfile
     worker: ./Frontend/Dockerfile
 run:
-  web: npm start --prefix Backend
-  worker: npm start --prefix Frontend
+  web: npm start --prefix backend
+  worker: npm start --prefix frontend

@@ -7,7 +7,7 @@ WORKDIR /app
 
 ENV PORT 5000
 
-EXPOSE $port
+EXPOSE $PORT
 
 COPY package*.json /app/
 
