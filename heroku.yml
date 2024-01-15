@@ -94,9 +94,7 @@ docker:
   web: Backend/Dockerfile
 frontend: Frontend/Dockerfile
 
-services:
-  - backend
-  - frontend
+
 
 run:
   backend:
