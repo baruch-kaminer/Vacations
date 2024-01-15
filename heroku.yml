@@ -90,14 +90,19 @@
 
 
 build:
-docker:
+  frontend: Frontend/Dockerfile
   web: Backend/Dockerfile
-frontend: Frontend/Dockerfile
 
-
+services:
+  - frontend
+  - web
 
 run:
-  web::
-    command: npm start
   frontend:
-    command: npm start
+    command:
+      - npm
+      - start
+  web:
+    command:
+      - npm
+      - start
