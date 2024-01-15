@@ -89,20 +89,29 @@
 
 
 
+# build:
+#   frontend: Frontend/Dockerfile
+#   web: Backend/Dockerfile
+
+# services:
+#   - frontend
+#   - web
+
+# run:
+#   frontend:
+#     command:
+#       - npm
+#       - start
+#   web:
+#     command:
+#       - npm
+#       - start
+
+
 build:
-  frontend: Frontend/Dockerfile
-  web: Backend/Dockerfile
-
-services:
-  - frontend
-  - web
-
+  docker:
+    web: Backend/Dockerfile
+    worker: Frontend/Dockerfile
 run:
-  frontend:
-    command:
-      - npm
-      - start
-  web:
-    command:
-      - npm
-      - start
+  web: npm start --prefix Backend
+  worker: npm start --prefix Frontend
