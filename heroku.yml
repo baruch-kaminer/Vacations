@@ -97,7 +97,7 @@ frontend: Frontend/Dockerfile
 
 
 run:
-  backend:
+  web::
     command: npm start
   frontend:
     command: npm start
