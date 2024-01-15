@@ -110,8 +110,8 @@
 
 build:
   docker:
-    web: Backend/Dockerfile
-    worker: Frontend/Dockerfile
+    web: ./Backend/Dockerfile
+    worker: ./Frontend/Dockerfile
 run:
   web: npm start --prefix backend
   worker: npm start --prefix frontend
