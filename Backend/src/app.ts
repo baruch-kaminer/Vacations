@@ -20,7 +20,8 @@ server.use(expressRateLimit({
     message: 'Attack attempt detected'
 }));
 
-server.use(cors({ origin: appConfig.siteUrl || 'https://ny-vacations-4a8ac79fda0e.herokuapp.com/' } ));
+// server.use(cors({ origin: appConfig.siteUrl || 'https://ny-vacations-4a8ac79fda0e.herokuapp.com/' } ));
+server.use(cors({  origin: 'https://ny-vacations-4a8ac79fda0e.herokuapp.com/' } ));
 
 server.use(helmet());
 
