@@ -10,6 +10,7 @@ import expressRateLimit from "express-rate-limit";
 import helmet from "helmet";
 import sanitaize from "./3-middleware/sanitize";
 import expressFileUpload from "express-fileupload"
+import path from "path";
 
 const server = express();
 
@@ -31,6 +32,12 @@ server.use(expressFileUpload({
 
 
 server.use(sanitaize);
+
+server.use(express.static(path.join(__dirname, 'build')));
+server.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+});
+
 
 server.use('/api', authController);
 

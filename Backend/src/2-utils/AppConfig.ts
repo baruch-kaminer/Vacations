@@ -18,7 +18,7 @@ class ProductionConfig extends AppConfig {
     // constructor () {
     //     super ();
         public isProduction = true;
-        public host = process.env.HOST;
+        public host = process.env.HOST || 'localhost';
         public username = process.env.USERNAME;
         public password = process.env.PASSWORD;
         public database = process.env.DATABASE;
