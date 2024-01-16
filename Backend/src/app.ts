@@ -33,11 +33,11 @@ server.use(expressFileUpload({
 
 server.use(sanitaize);
 
-// server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
-server.use(express.static(path.join(__dirname, '../Frontend/build')));
+server.use(express.static(path.join(__dirname, '..', 'Frontend', 'build')));
+// server.use(express.static(path.join(__dirname, '../Frontend/build')));
 server.get('/*', (req, res) => {
-//   res.sendFile(path.join(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
-  res.sendFile(path.join(__dirname, '../Frontend/build/index.html'));
+  res.sendFile(path.join(__dirname, '..', 'Frontend', 'build', 'index.html'));
+//   res.sendFile(path.join(__dirname, '../Frontend/build/index.html'));
 });
 
 
