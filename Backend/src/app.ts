@@ -43,6 +43,12 @@ server.use((req, res, next) => {
   next();
 });
 
+server.use(function(req, res, next) {
+  res.setHeader("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;");
+   next();
+});
+
+
 
 server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
 server.get('/*', (req, res) => {
