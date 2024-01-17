@@ -53,8 +53,7 @@ function ListVacations():JSX.Element{
             notifyService.error(error.message);
         }     
     } 
-    console.log(vacations)
-    
+        
   
     return(
         <div className="ListVacations">
