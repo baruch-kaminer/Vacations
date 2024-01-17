@@ -13,6 +13,8 @@ import expressFileUpload from "express-fileupload"
 import path from "path";
 
 const server = express();
+const crypto = require('crypto');
+
 
 server.use(expressRateLimit({
     max: 50, 
@@ -47,6 +49,13 @@ server.use(function(req, res, next) {
   res.setHeader("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;");
    next();
 });
+
+server.use(function(req, res, next) {
+  const nonce = crypto.randomBytes(16).toString('base64');
+  res.setHeader("Content-Security-Policy", `default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com 'nonce-${nonce}';`);
+  return next();
+});
+
 
 
 
