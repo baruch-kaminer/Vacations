@@ -33,11 +33,15 @@ server.use(expressFileUpload({
 
 server.use(sanitaize);
 
+server.use((req, res, next) => {
+  res.setHeader("Content-Security-Policy", "default-src 'self'; connect-src 'self' https://my-vacations-4a8ac79fda0e.herokuapp.com;");
+  next();
+});
+
+
 server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
-// server.use(express.static(path.join(__dirname, '../Frontend/build')));
 server.get('/*', (req, res) => {
   res.sendFile(path.join(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
-//   res.sendFile(path.join(__dirname, '../Frontend/build/index.html'));
 });
 
 
