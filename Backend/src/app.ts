@@ -51,4 +51,4 @@ server.use('*', routeNotFound);
 
 server.use(catchAll);
 
-server.listen(process.env.PORT || 'https://ny-vacations-4a8ac79fda0e.herokuapp.com/' ||appConfig.port, () => console.log(`Listening to http://localhost:${appConfig.port}`))
+server.listen(process.env.PORT || appConfig.port || 'https://ny-vacations-4a8ac79fda0e.herokuapp.com/' , () => console.log(`Listening to http://localhost:${appConfig.port}`))

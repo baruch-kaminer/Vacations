@@ -21,12 +21,12 @@ function VacationsFollow(props:VacationsFollowProps):JSX.Element{
     useEffect(() => {
         followServices.getFollowsByIdAndByVacation(props.follow?.userId, props.follow?.vacationId)
         .then((followers) =>{
-            setFollowers(followers?.followId);
-            followers && setTextBtn('Following');
-            followers && setClassName(className + ' click');
+            setFollowers( followers?.followId);
+            followers && setTextBtn( 'Following');
+            followers && setClassName( c => c + ' click');
         })
-        .catch(err => notifyService.error(err)) 
-    },[]);
+        .catch(err => notifyService.error(err?.message)) 
+    },[props.follow?.userId, props.follow?.vacationId]);
     
     
     const follow = async () => { 

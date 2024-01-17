@@ -52,7 +52,8 @@ function ListVacations():JSX.Element{
         } catch (error:any) {
             notifyService.error(error.message);
         }     
-    }
+    } 
+    console.log(vacations)
     
   
     return(
@@ -61,22 +62,21 @@ function ListVacations():JSX.Element{
             { isLoggedIn() && user.role === "User"  && <div className="divBtnNav"><button className="btnNav" onClick={getVacationsByUserId}>MY VACATIONS</button></div> }
            
             
-           <div className="listCard">
-            
-            {vacations && vacations.map(v => <VacationsCard key={v.vacationId} vacations={v} deleteVacation={deleteVacation}/>)}
-        </div>  
-        { vacations.length > 0 &&
-        <div className="btnShowMore">
-            <button className="learn-more btnShowMore" onClick={() => setNum(num + 9)} >
-                <span className="circle" aria-hidden="true">
-                <span className="icon arrow"></span>
-                </span>
-                <span className="button-text">Show More</span>
-            </button> 
-        </div>
+            <div className="listCard">
+                {vacations && vacations.map(v => <VacationsCard key={v.vacationId} vacations={v} deleteVacation={deleteVacation}/>)}
+            </div>  
+        {
+            vacations.length > 0 &&
+            <div className="btnShowMore">
+                <button className="learn-more btnShowMore" onClick={() => setNum(num + 9)} >
+                    <span className="circle" aria-hidden="true">
+                    <span className="icon arrow"></span>
+                    </span>
+                    <span className="button-text">Show More</span>
+                </button> 
+            </div>
         }
-        </div>
-       
+        </div>    
     )
 }
 

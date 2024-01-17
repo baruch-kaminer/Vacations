@@ -12,7 +12,7 @@ function Logout(): JSX.Element {
         logout();
         notifyService.success("Bye Bye...");
         navigate("/");
-    }, []);
+    }, [logout, navigate]);
 
     return null;
 }

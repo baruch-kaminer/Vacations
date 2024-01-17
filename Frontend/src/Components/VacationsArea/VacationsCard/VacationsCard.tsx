@@ -48,7 +48,7 @@ useEffect(() => {
         })
         .catch(err => console.log(err))
     } 
-}, []);
+}, [props.vacations.imageName]);
 
 
 
@@ -63,7 +63,7 @@ const delVacation = async(id:number) => {
         <div className="CardVacations">
            <article className="card">
                 <header className="card__thumb">
-                    <img src={srcImage}/>
+                    <img src={srcImage} alt="vacation-images"/>
                 </header>
                 <div className="card__date">
                     <span className="card__date__day">{day && day}</span>

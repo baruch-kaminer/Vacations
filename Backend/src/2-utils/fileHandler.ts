@@ -19,7 +19,7 @@ function deleteFile(fileName: string): void {
 
 
 function fileExists(fileName: string): boolean {
-    if (fs.existsSync("./src/1-assets/images/" + fileName)) {
+    if (fs.existsSync("./Backend/src/1-assets/images/" + fileName)) {
         return true;
     }
     return false;

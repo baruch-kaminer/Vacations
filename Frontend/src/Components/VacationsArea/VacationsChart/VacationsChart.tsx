@@ -48,7 +48,8 @@ function VacationsChart(): JSX.Element{
 
   const labels:any = [];
   const yAxis:any = [];
-  vacations.map(v => {
+  
+  vacations.forEach(v => {
     if (v.amountFollowers > 0){
       labels.push(v.destination);
       yAxis.push(v.amountFollowers)

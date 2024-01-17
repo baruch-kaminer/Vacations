@@ -43,7 +43,7 @@ function EditVacations(): JSX.Element {
         setValue('amountFollowers', vacation.amountFollowers);
         setValue('vacationId', vacation.vacationId);
         })
-    },[]);
+    },[params.id, setValue]);
   
 
 

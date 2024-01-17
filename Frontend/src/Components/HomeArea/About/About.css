@@ -2,29 +2,29 @@
     margin: auto;
     display: flex;
     flex-direction: column;
-    justify-content: start;
+    justify-content: center;
     align-items: center;
     width: 80%;
     height: 100%;
     background-color: white;
-    /* border: 1px solid; */
+
     border-radius: 8px;
     color: coral;
     text-align: center;
 }
 
 .space{
-    border: 2px dashed ;
+    border: 2px black dashed ;
     width: 50%;
     border-style: dotted;
 }
 
-.connect{
-    /* display: flex;
+/* .connect{
+    display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center; */
-}
+    justify-content: center;
+} */
 a{
     font-weight: unset;
     color: blue;
