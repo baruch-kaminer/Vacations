@@ -38,6 +38,11 @@ server.use((req, res, next) => {
   next();
 });
 
+server.use((req, res, next) => {
+  res.header('Access-Control-Allow-Origin', 'https://my-vacations-2856224fbe83.herokuapp.com');
+  next();
+});
+
 
 server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
 server.get('/*', (req, res) => {
