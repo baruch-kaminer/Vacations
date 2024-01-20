@@ -63,7 +63,7 @@ function ListVacations():JSX.Element{
             
             <div className="listCard">
                 {
-                // vacations.length > 0 && vacations.map(v => <VacationsCard key={v.vacationId} vacations={v} deleteVacation={deleteVacation}/>)
+                vacations.length > 0 && vacations.map(v => <VacationsCard key={v.vacationId} vacations={v} deleteVacation={deleteVacation}/>)
                 }
             </div>  
         {
