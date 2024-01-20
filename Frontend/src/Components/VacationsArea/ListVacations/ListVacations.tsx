@@ -23,6 +23,8 @@ function ListVacations():JSX.Element{
         setLoader('loader')
         vacationsServices.getTenVacations(num)
         .then(async vacations => {
+            console.log(vacations);
+            
             await new Promise(() => {
                 setTimeout(() => {
                     setLoader('v')

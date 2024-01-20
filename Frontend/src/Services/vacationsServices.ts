@@ -9,6 +9,8 @@ class VacationsServices{
 
     public getTenVacations = async(limit: number) => {
         const response = await axios.get(appConfig.vacationsUrl + 'limit/' + limit);
+        console.log(response.data);
+        
         return response.data;
     }
 
