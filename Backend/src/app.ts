@@ -35,26 +35,26 @@ server.use(expressFileUpload({
 
 server.use(sanitaize);
 
-server.use((req, res, next) => {
-  res.setHeader("Content-Security-Policy", "default-src 'self'; connect-src 'self' https://my-vacations-4a8ac79fda0e.herokuapp.com;");
-  next();
-});
+// server.use((req, res, next) => {
+//   res.setHeader("Content-Security-Policy", "default-src 'self'; connect-src 'self' https://my-vacations-4a8ac79fda0e.herokuapp.com;");
+//   next();
+// });
 
-server.use((req, res, next) => {
-  res.header('Access-Control-Allow-Origin', 'https://my-vacations-2856224fbe83.herokuapp.com');
-  next();
-});
+// server.use((req, res, next) => {
+//   res.header('Access-Control-Allow-Origin', 'https://my-vacations-2856224fbe83.herokuapp.com');
+//   next();
+// });
 
-server.use(function(req, res, next) {
-  res.setHeader("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;");
-   next();
-});
+// server.use(function(req, res, next) {
+//   res.setHeader("Content-Security-Policy", "default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com;");
+//    next();
+// });
 
-server.use(function(req, res, next) {
-  const nonce = crypto.randomBytes(16).toString('base64');
-  res.setHeader("Content-Security-Policy", `default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com 'nonce-${nonce}';`);
-  return next();
-});
+// server.use(function(req, res, next) {
+//   const nonce = crypto.randomBytes(16).toString('base64');
+//   res.setHeader("Content-Security-Policy", `default-src 'self'; style-src 'self' 'unsafe-inline' https://cdn.jsdelivr.net https://fonts.googleapis.com 'nonce-${nonce}';`);
+//   return next();
+// });
 
 
 
