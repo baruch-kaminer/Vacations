@@ -11,8 +11,8 @@
     <meta http-equiv="Content-Security-Policy" content="default-src 'self' https://my-vacations-4a8ac79fda0e.herokuapp.com;"> -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://my-vacations-4a8ac79fda0e.herokuapp.com;">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://cdn.jsdelivr.net;">
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com;">
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; style-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com 'unsafe-inline';">
+    <meta http-equiv="Content-Security-Policy" content="style-src-elem 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com;">
 
 
     <meta name="theme-color" content="#000000" />
@@ -27,6 +27,11 @@
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
     <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <script>
+      const nonce = 'A/feItQduZsq4+kb1Nksxw==';
+      document.querySelector('style').setAttribute('nonce', nonce);
+    </script>
+    
     <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
