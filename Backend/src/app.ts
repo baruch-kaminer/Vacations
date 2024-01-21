@@ -60,12 +60,7 @@ server.use(sanitaize);
 
 
 server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
-server.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
-});
-server.get('/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
-});
+
 
 // app.get("/*", function (req, res) {
 //   res.sendFile(path.resolve(__dirname, '../client/build', 'index.html'));
@@ -77,6 +72,13 @@ server.use('/api', authController);
 server.use('/api', vacationsController);
 
 server.use('/api', followController);
+
+server.get('/*', (req, res) => {
+  res.sendFile(path.join(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
+});
+server.get('/*', (req, res) => {
+  res.sendFile(path.resolve(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
+});
 
 server.use('*', routeNotFound);
 

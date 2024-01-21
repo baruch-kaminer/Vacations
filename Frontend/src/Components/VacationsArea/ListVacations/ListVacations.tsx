@@ -22,9 +22,7 @@ function ListVacations():JSX.Element{
     useEffect(() => {
         setLoader('loader')
         vacationsServices.getTenVacations(num)
-        .then(async vacations => {
-            console.log(vacations);
-            
+        .then(async vacations => {            
             await new Promise(() => {
                 setTimeout(() => {
                     setLoader('v')
@@ -54,9 +52,7 @@ function ListVacations():JSX.Element{
         } catch (error:any) {
             notifyService.error(error.message);
         }     
-    } 
-        console.log(vacations);
-        
+    }         
   
     return(
         <div className="ListVacations">
@@ -66,7 +62,7 @@ function ListVacations():JSX.Element{
             
             <div className="listCard">
                 {
-                // vacations.length > 0 && vacations.map(v => <VacationsCard key={v.vacationId} vacations={v} deleteVacation={deleteVacation}/>)
+                vacations.length > 0 && vacations.map(v => <VacationsCard key={v.vacationId} vacations={v} deleteVacation={deleteVacation}/>)
                 }
             </div>  
         {
