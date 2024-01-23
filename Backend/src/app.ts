@@ -23,7 +23,14 @@ server.use(expressRateLimit({
 }));
 
 server.use(cors({ origin: appConfig.siteUrl || 'https://my-vacations-2856224fbe83.herokuapp.com/' } ));
-server.use(cors({ origin: 'http://localhost:3000' } ));
+
+const corsOptions = {
+  origin: 'http://localhost:3000', // או '*' אם אתה רוצה לאשר כל מקור
+  methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
+  credentials: true,
+  optionsSuccessStatus: 204,
+};
+server.use(cors(corsOptions ));
 
 // server.use(helmet());
 
