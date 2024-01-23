@@ -18,11 +18,13 @@ class ProductionConfig extends AppConfig {
     // constructor () {
     //     super ();
         public isProduction = true;
-        public host = process.env.HOST || 'localhost';
+        // public host = process.env.HOST || 'localhost';
+        public host = 'localhost';
         public username = process.env.USERNAME;
         public password = process.env.PASSWORD;
         public database = process.env.DATABASE;
-        public port = parseInt (process.env.PORT);
+        // public port = parseInt (process.env.PORT);
+        public port = process.env.PORT;
         public siteUrl = process.env.SITE_URL;
     // }
 }

@@ -30,10 +30,7 @@ function ListVacations():JSX.Element{
                 }, 1000);
             })            
         })
-        .catch((err) => {
-            notifyService.error(err);
-            return <><div> נסה שוב</div></>
-        })
+        .catch(err => notifyService.error(err))
     }, [num])
     
     const getVacationsByUserId = async() => {
