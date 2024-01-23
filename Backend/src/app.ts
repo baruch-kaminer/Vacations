@@ -59,7 +59,7 @@ server.use(sanitaize);
 
 
 
-server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
+// server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
 
 
 // app.get("/*", function (req, res) {
@@ -73,12 +73,12 @@ server.use('/api', vacationsController);
 
 server.use('/api', followController);
 
-server.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
-});
-server.get('/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
-});
+// server.get('/*', (req, res) => {
+//   res.sendFile(path.join(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
+// });
+// server.get('/*', (req, res) => {
+//   res.sendFile(path.resolve(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
+// });
 
 server.use('*', routeNotFound);
 
