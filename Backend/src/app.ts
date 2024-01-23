@@ -59,7 +59,7 @@ server.use(sanitaize);
 
 
 
-// server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
+server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
 
 
 // app.get("/*", function (req, res) {
