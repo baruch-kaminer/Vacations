@@ -23,6 +23,7 @@ server.use(expressRateLimit({
 }));
 
 server.use(cors({ origin: appConfig.siteUrl || 'https://my-vacations-2856224fbe83.herokuapp.com/' } ));
+server.use(cors({ origin: 'http://localhost:3000' } ));
 
 // server.use(helmet());
 
