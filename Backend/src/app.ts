@@ -25,7 +25,7 @@ server.use(expressRateLimit({
 server.use(cors({ origin: appConfig.siteUrl || 'https://my-vacations-2856224fbe83.herokuapp.com/' } ));
 
 const corsOptions = {
-  origin: 'http://localhost:3000', // או '*' אם אתה רוצה לאשר כל מקור
+  origin: 'https://my-vacations-2856224fbe83.herokuapp.com/', // או '*' אם אתה רוצה לאשר כל מקור
   methods: 'GET,HEAD,PUT,PATCH,POST,DELETE',
   credentials: true,
   optionsSuccessStatus: 204,
