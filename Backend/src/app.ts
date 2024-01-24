@@ -33,7 +33,7 @@ const corsOptions = {
 };
 server.use(cors(corsOptions ));
 
-server.use(helmet());
+// server.use(helmet());
 
 server.use( express.json());
 
