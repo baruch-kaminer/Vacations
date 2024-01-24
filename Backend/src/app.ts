@@ -81,19 +81,20 @@ server.use(sanitaize);
 
   server.use('/api', followController);
 
-server.get('/*', (req, res) => {
-  res.sendFile(path.join(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
-});
+  server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
+
+  server.get('/*', (req, res) => {
+    res.sendFile(path.join(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
+  });
 
 
-server.use(express.static(path.join(__dirname, '..', '..', 'Frontend', 'build')));
 
-server.get('/*', (req, res) => {
-  res.sendFile(path.resolve(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
-});
+  server.get('/*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, '..', '..', 'Frontend', 'build', 'index.html'));
+  });
 
-server.use('*', routeNotFound);
+  server.use('*', routeNotFound);
 
-server.use(catchAll);
+  server.use(catchAll);
 
-server.listen(process.env.PORT || appConfig.port || 'https://ny-vacations-4a8ac79fda0e.herokuapp.com/' , () => console.log(`Listening to http://localhost:${appConfig.port}`))
+  server.listen(process.env.PORT || appConfig.port || 'https://ny-vacations-4a8ac79fda0e.herokuapp.com/' , () => console.log(`Listening to http://localhost:${appConfig.port}`))
