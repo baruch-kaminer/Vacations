@@ -5,7 +5,7 @@ async function logger(msg: string): Promise<void> {
     const now = new Date();
     let line = `${now.toLocaleString()} \t ${msg}\n`;
     line += '----------------------------\n';
-    await fsPromises.appendFile('./log.txt', line);
+    await fsPromises.appendFile('./Backend/log.txt', line);
 
 }
 export default logger;

@@ -2,28 +2,13 @@ class AppConfig{
 
 }
 
-// class ProductionConfig extends AppConfig{
-
-//     public isProduction = true;
-//     public host = '';
-//     public username = '';
-//     public password = '';
-//     public database = '';
-//     public port = 0;
-//     public siteUrl = '';
-// }
-
 class ProductionConfig extends AppConfig {
 
-    // constructor () {
-    //     super ();
         public isProduction = true;
-        // public host = process.env.HOST || 'localhost';
         public host = 'localhost';
         public username = process.env.USERNAME;
         public password = process.env.PASSWORD;
         public database = process.env.DATABASE;
-        // public port = parseInt (process.env.PORT);
         public port = process.env.PORT;
         public siteUrl = process.env.SITE_URL;
     // }
