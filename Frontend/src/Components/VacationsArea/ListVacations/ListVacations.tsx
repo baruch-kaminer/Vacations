@@ -27,14 +27,14 @@ function ListVacations():JSX.Element{
                 setTimeout(() => {
                     setLoader('v')
                     setVacations(vacations) 
-                }, 1000);
+                }, 1500);
             })            
         })
         .catch(err => notifyService.error(err))
     }, [num])
     
     const getVacationsByUserId = async() => {
-        await vacationsServices.getVacationsByUserId(user.userId)
+        await vacationsServices.getVacationsByUserId(user.userId);
         try {
            const vacationsByUserId = await vacationsServices.getVacationsByUserId(user.userId);
            setVacations(vacationsByUserId);

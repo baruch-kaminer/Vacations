@@ -30,7 +30,7 @@ const corsOptions = {
   optionsSuccessStatus: 204,
   allowedHeaders: 'Content-Type', 
 };
-server.use(cors(corsOptions ));
+appConfig.isProduction && server.use(cors(corsOptions ));
 
 // server.use(helmet());
 
