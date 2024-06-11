@@ -2,6 +2,8 @@ node_modules/
 .vscode/
 
 log.txt
+.log.txt
+/log.txt
 .ignore/
 ignore/
 /.pnp
